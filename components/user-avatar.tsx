@@ -8,7 +8,6 @@ import {
   AvatarImage,
 } from "@/components/ui/avatar";
 import { LiveBadge } from "@/components/live-badge";
-// import { SpecialAvatar } from "./ui/avatar3d";
 
 const avatarSizes = cva(
   "",
@@ -51,7 +50,6 @@ export const UserAvatar = ({
         )}
       >
         <AvatarImage src={imageUrl} className="object-cover" />
-        {/* <SpecialAvatar imageUrl={imageUrl} /> */}
         <AvatarFallback>
           {username[0]}
           {username[username.length - 1]}
