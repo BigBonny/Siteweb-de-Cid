@@ -86,4 +86,4 @@ Exécuter des commandes avec npm `npm run [command]`
 
 | commande        | descriptif                                             |
 | :---------------| :------------------------------------------------------|
-| `dév`           | Démarre une instance de développement de l'application |
+| `dev`           | Démarre une instance de développement de l'application |

@@ -32,23 +32,15 @@ export const Thumbnail = ({
       )
   }
 
-  // const RealContent = ()=>{
-  //   return(
-  //     <Image
-  //       src={src}
-  //       fill
-  //       alt="Thumbnail"
-  //       className="object-cover transition-transform group-hover:translate-x-2 group-hover:-translate-y-2 rounded-md"
-  //     />
-  //   )
-  // }
 
   if (!src) {
     content = (
       <div className="bg-background flex flex-col items-center justify-center gap-y-4 h-full w-full transition-transform group-hover:translate-x-2 group-hover:-translate-y-2 rounded-md">
         <CardContainer className="bg-background flex flex-col items-center justify-center gap-y-4 h-full w-full transition-transform group-hover:translate-x-2 group-hover:-translate-y-2 rounded-md">
 
-              <CardItem children={Idk()} translateX={12} translateY={12} translateZ={12} rotateX={12} rotateY={12} rotateZ={-12}/>
+              <CardItem translateX={12} translateY={12} translateZ={12} rotateX={12} rotateY={12} rotateZ={-12}>
+                {Idk()}
+              </CardItem>
 
         </CardContainer>
         
@@ -59,12 +51,14 @@ export const Thumbnail = ({
     content = (
       <CardContainer className="bg-background flex flex-col items-center justify-center gap-y-4 h-full w-full transition-transform group-hover:translate-x-2 group-hover:-translate-y-2 rounded-md">
 
-              <CardItem children={<Image
-        src={src}
-        fill
-        alt="Thumbnail"
-        className="object-cover transition-transform group-hover:translate-x-2 group-hover:-translate-y-2 rounded-md"
-      />} translateX={12} translateY={12} translateZ={12} rotateX={12} rotateY={12} rotateZ={-12}/>
+              <CardItem translateX={12} translateY={12} translateZ={12} rotateX={12} rotateY={12} rotateZ={-12}>
+                <Image
+                  src={src}
+                  fill
+                  alt="Thumbnail"
+                  className="object-cover transition-transform group-hover:translate-x-2 group-hover:-translate-y-2 rounded-md"
+                />
+              </CardItem>
 
         </CardContainer>
     )
