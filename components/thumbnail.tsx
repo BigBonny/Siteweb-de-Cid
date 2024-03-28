@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
 import { LiveBadge } from "@/components/live-badge";
 import { UserAvatar } from "@/components/user-avatar";
-import { CardContainer, CardItem } from "./ui/avatar3d";
 
 interface ThumbnailProps {
   src: string | null;
@@ -20,47 +19,26 @@ export const Thumbnail = ({
  }: ThumbnailProps) => {
   let content;
 
-  const Idk = ()=>{
-    return(
-    <UserAvatar
-        size="lg"
-        showBadge
-        username={username}
-        imageUrl={fallback}
-        isLive={isLive}
-      />
-      )
-  }
-
-
   if (!src) {
     content = (
       <div className="bg-background flex flex-col items-center justify-center gap-y-4 h-full w-full transition-transform group-hover:translate-x-2 group-hover:-translate-y-2 rounded-md">
-        <CardContainer className="bg-background flex flex-col items-center justify-center gap-y-4 h-full w-full transition-transform group-hover:translate-x-2 group-hover:-translate-y-2 rounded-md">
-
-              <CardItem translateX={12} translateY={12} translateZ={12} rotateX={12} rotateY={12} rotateZ={-12}>
-                {Idk()}
-              </CardItem>
-
-        </CardContainer>
-        
-
+        <UserAvatar
+          size="lg"
+          showBadge
+          username={username}
+          imageUrl={fallback}
+          isLive={isLive}
+        />
       </div>
     )
   } else {
     content = (
-      <CardContainer className="bg-background flex flex-col items-center justify-center gap-y-4 h-full w-full transition-transform group-hover:translate-x-2 group-hover:-translate-y-2 rounded-md">
-
-              <CardItem translateX={12} translateY={12} translateZ={12} rotateX={12} rotateY={12} rotateZ={-12}>
-                <Image
-                  src={src}
-                  fill
-                  alt="Thumbnail"
-                  className="object-cover transition-transform group-hover:translate-x-2 group-hover:-translate-y-2 rounded-md"
-                />
-              </CardItem>
-
-        </CardContainer>
+      <Image
+        src={src}
+        fill
+        alt="Thumbnail"
+        className="object-cover transition-transform group-hover:translate-x-2 group-hover:-translate-y-2 rounded-md"
+      />
     )
   }
 
