@@ -29,7 +29,7 @@ export const Logo = () => {
             SID
           </p>
           <p className="text-xs text-muted-foreground">
-            Let's play!
+            Let&apos;s play!
           </p>
         </div>
       </div>
