@@ -70,19 +70,19 @@ export const InfoModal = ({
     <Dialog>
       <DialogTrigger asChild>
         <Button variant="link" size="sm" className="ml-auto">
-          Edit
+          Modifier
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>
-            Edit stream info
+            Modifier les informations du stream
           </DialogTitle>
         </DialogHeader>
         <form onSubmit={onSubmit} className="space-y-14">
           <div className="space-y-2">
             <Label>
-              Name
+              Nom
             </Label>
             <Input
               disabled={isPending}
@@ -93,12 +93,12 @@ export const InfoModal = ({
           </div>
           <div className="space-y-2">
             <Label>
-              Thumbnail
+              Vignette
             </Label>
             {thumbnailUrl ? (
               <div className="relative aspect-video rounded-xl overflow-hidden border border-white/10">
                 <div className="absolute top-2 right-2 z-[10]">
-                  <Hint label="Remove thumbnail" asChild side="left">
+                  <Hint label="Enlever la vignette" asChild side="left">
                     <Button
                       type="button"
                       disabled={isPending}

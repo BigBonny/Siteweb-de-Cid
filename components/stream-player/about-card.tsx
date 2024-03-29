@@ -29,7 +29,7 @@ export const AboutCard = ({
       <div className="group rounded-xl bg-background p-6 lg:p-10 flex flex-col gap-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-x-2 font-semibold text-lg lg:text-2xl">
-            About {hostName}
+            Sur {hostName}
             <VerifiedMark />
           </div>
           {isHost && (
@@ -42,7 +42,7 @@ export const AboutCard = ({
           </span> {followedByLabel}
         </div>
         <p className="text-sm">
-          {bio || "This user prefers to keep an air of mystery about them."}
+          {bio || "Cet utilisateur préfère garder un air de mystère à leur sujet."}
         </p>
       </div>
     </div>

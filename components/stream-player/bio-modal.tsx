@@ -44,16 +44,16 @@ export const BioModal = ({
     <Dialog>
       <DialogTrigger asChild>
         <Button variant="link" size="sm" className="ml-auto">
-          Edit
+          Modifier
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Edit user bio</DialogTitle>
+          <DialogTitle>Modifier la biographie de l'utilisateur</DialogTitle>
         </DialogHeader>
         <form onSubmit={onSubmit} className="space-y-4">
           <Textarea
-            placeholder="User bio"
+            placeholder="bio"
             onChange={(e) => setValue(e.target.value)}
             value={value}
             disabled={isPending}
@@ -62,7 +62,7 @@ export const BioModal = ({
           <div className="flex justify-between">
             <DialogClose ref={closeRef} asChild>
               <Button type="button" variant="ghost">
-                Cancel
+                Annuler 
               </Button>
             </DialogClose>
             <Button
@@ -70,7 +70,7 @@ export const BioModal = ({
               type="submit"
               variant="primary"
             >
-              Save
+              Sauvegarder
             </Button>
           </div>
         </form>

@@ -48,7 +48,7 @@ export const ChatCommunity = ({
     return (
       <div className="flex flex-1 items-center justify-center">
         <p className="text-sm text-muted-foreground">
-          Community is disabled
+          La communauté est désactivée
         </p>
       </div>
     );
@@ -63,7 +63,7 @@ export const ChatCommunity = ({
       />
       <ScrollArea className="gap-y-2 mt-4">
         <p className="text-center text-sm text-muted-foreground hidden last:block p-2">
-          No results
+         Aucun résultat
         </p>
         {filteredParticipants.map((participant) => (
           <CommunityItem

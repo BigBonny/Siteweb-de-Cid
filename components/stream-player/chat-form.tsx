@@ -68,7 +68,7 @@ export const ChatForm = ({
           onChange={(e) => onChange(e.target.value)}
           value={value}
           disabled={isDisabled}
-          placeholder="Send a message"
+          placeholder="Envoyer un message"
           className={cn(
             "border-white/10",
             (isFollowersOnly || isDelayed) && "rounded-t-none border-t-0"

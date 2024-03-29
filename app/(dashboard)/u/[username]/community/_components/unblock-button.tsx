@@ -31,7 +31,7 @@ export const UnblockButton = ({
       size="sm"
       className="text-blue-500 w-full"
     >
-      Unblock
+      Débloquer
     </Button>
   )
 }

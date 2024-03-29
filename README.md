@@ -57,9 +57,24 @@ LIVEKIT_API_KEY=
 LIVEKIT_API_SECRET=
 NEXT_PUBLIC_LIVEKIT_WS_URL=
 
-UPLOADTHING_SECRET=
-UPLOADTHING_APP_ID=
 ```
+
+### Tout d'abord il faut créer un domaine [Ngrok](https://dashboard.ngrok.com/cloud-edge/domains), apres avoir créer un compte, cliquer sur "Add new Domain" ![Screenshot](newdomain.PNG) et sur "Start a tunnel" ![Screenshot](starttunnel.PNG) dans les commandes de Ngrok copier et coller la commande donnee en changeant a la fin le "80" par "3000".
+### Vous aurez un lien qui va etre util apres (c'est aussi le lien du site crée)
+
+### Pour les (NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY et CLERK_SECRET_KEY), veuillez suivre les 2 premieres etapes de [la-documentation-de-clerk](https://clerk.com/docs/quickstarts/nextjs)
+
+### Apres avoir créer un compte [Clerk](https://clerk.com/) cliquer sur "Webhooks" dans la barre latérale à gauche cliquer sur "Add Endpoint" ![ScreenShot](addendpnt.PNG).
+### Mettez votre lien de Ngrok et ajouter à la fin de ce lien /api/webhooks/clerk.
+### Cliquer sur le bouton en dessous de URL et vous devez voir à droite "Signing Secret" ![Screenshot](signingsecret.PNG) ajouter ce code secret dans CLERK_WEBHOOK_SECRET.
+
+### Pour le (DATABASE_URL) créer une base de données mySql et mettez votre lien sous forme de "mysql://le nom du host de la base de donnees (generalement root):le most de passe de la base de donnees@ le lien de la base de donnees(si elle locale elle est localhost):le port de la base de donnees(generalement 3306)/lenomdelabasededonnees"
+
+### Apres avoir créer un compte [Livekit](https://livekit.io/) cliquer sur "Settings" dans la barre latérale à gauche, cliqueer sur "Keys" ![Screenshot](keys.PNG) ajouter un nouveau "Key".Copier le URL en dessous de "Websocket URL" et metter comme valeur de NEXT_PUBLIC_LIVEKIT_WS_URL. Et pour le "API Key" mettez le code comme valeur de LIVEKIT_API_KEY et pour le "Secret Key" mettez le comme valeur de LIVEKIT_API_SECRET si vous ne trouvez pas le "Secret Key" cliquer sur "Reveal Secret" ![Screenshot](reveal.PNG). Cliquez sur Webhooks et sur "Add New Endpoint", choisissez un nom, pour le URL mettez le URL de votre sitee avec Ngrok et ajouter /api/webhooks/livekit et enfin en dessous de "Signing API Key" metter la cle de API que vous avez fait.
+
+
+
+
 ### Configurer Prisma
 ### Ajouter une base de données MySQL
 

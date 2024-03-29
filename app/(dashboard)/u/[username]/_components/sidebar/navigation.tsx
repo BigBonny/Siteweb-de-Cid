@@ -22,7 +22,7 @@ export const Navigation = () => {
       icon: Fullscreen,
     },
     {
-      label: "Keys",
+      label: "Clés",
       href: `/u/${user?.username}/keys`,
       icon: KeyRound,
     },
@@ -32,7 +32,7 @@ export const Navigation = () => {
       icon: MessageSquare,
     },
     {
-      label: "Community",
+      label: "Communauté",
       href: `/u/${user?.username}/community`,
       icon: Users,
     },
