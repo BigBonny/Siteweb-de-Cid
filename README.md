@@ -31,7 +31,7 @@ Caractéristiques principales:
 - 🚀 Déploiement
 
 ### Conditions préalables
-**Nœud version 18.17 ou ultérieure**
+**Node version 18.17 ou ultérieure**
 
 ### Installer les packages
 
@@ -58,6 +58,8 @@ LIVEKIT_API_SECRET=
 NEXT_PUBLIC_LIVEKIT_WS_URL=
 
 ```
+
+### Il n'était pas possible d'héberger le serveur car la base de données est locale, et il faut payer pour héberger une base de données. Donc il faut suivre les étapes en dessous afin de pouvoir utiliser notre site
 
 ### Tout d'abord il faut créer un domaine [Ngrok](https://dashboard.ngrok.com/cloud-edge/domains), apres avoir créer un compte, cliquer sur "Add new Domain" ![Screenshot](newdomain.PNG) et sur "Start a tunnel" ![Screenshot](starttunnel.PNG) dans les commandes de Ngrok copier et coller la commande donnee en changeant a la fin le "80" par "3000".
 ### Vous aurez un lien qui va etre util apres (c'est aussi le lien du site crée)
