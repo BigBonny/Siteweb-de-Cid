@@ -49,7 +49,7 @@ export const BioModal = ({
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Modifier la biographie de l'utilisateur</DialogTitle>
+          <DialogTitle>Modifier la biographie de l&apos;utilisateur</DialogTitle>
         </DialogHeader>
         <form onSubmit={onSubmit} className="space-y-4">
           <Textarea

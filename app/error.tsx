@@ -8,7 +8,7 @@ const ErrorPage = () => {
   return ( 
     <div className="h-full flex flex-col space-y-4 items-center justify-center text-muted-foreground">
       <p>
-       Quelque chose s'est mal passé
+       Quelque chose s&apos;est mal pass&#xE9;
       </p>
       <Button variant="secondary" asChild>
         <Link href="/">
